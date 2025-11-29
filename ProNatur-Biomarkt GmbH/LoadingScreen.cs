@@ -34,6 +34,13 @@ namespace ProNatur_Biomarkt_GmbH
             if (loadingBarValue >= loadingProgressBar.Maximum)
             {
                 loadingbarTimer.Stop();
+
+                // Finish loading show main menu screen
+                MainMenuScreen mainMenuScreen = new MainMenuScreen();
+                mainMenuScreen.Show();
+
+                // hide loading screen
+                this.Hide();
             }
         }
 
